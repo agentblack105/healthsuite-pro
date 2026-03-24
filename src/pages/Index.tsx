@@ -1,16 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/landing/Navbar";
+import HeroSection from "@/components/landing/HeroSection";
+import TrustedBy from "@/components/landing/TrustedBy";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import ModuleSelector from "@/components/landing/ModuleSelector";
+import HowItWorks from "@/components/landing/HowItWorks";
+import PricingSection from "@/components/landing/PricingSection";
+import Testimonials from "@/components/landing/Testimonials";
+import CTABanner from "@/components/landing/CTABanner";
+import Footer from "@/components/landing/Footer";
+import FloatingChat from "@/components/landing/FloatingChat";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
-  );
-};
-
-const Index = PlaceholderIndex;
+const Index = () => (
+  <div className="min-h-screen bg-background">
+    <Navbar />
+    <HeroSection />
+    <TrustedBy />
+    <FeaturesSection />
+    <ModuleSelector />
+    <HowItWorks />
+    <PricingSection />
+    <Testimonials />
+    <CTABanner />
+    <Footer />
+    <FloatingChat />
+  </div>
+);
 
 export default Index;
