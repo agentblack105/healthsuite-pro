@@ -62,8 +62,8 @@ const Navbar = () => {
                   {link}
                 </a>
               ))}
-              <Button className="gradient-cta text-primary-foreground border-0 mt-2">
-                Get Started
+              <Button className="gradient-cta text-primary-foreground border-0 mt-2" asChild>
+                <Link to="/get-started">Get Started</Link>
               </Button>
             </div>
           </motion.div>

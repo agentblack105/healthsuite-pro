@@ -26,8 +26,9 @@ const CTABanner = () => (
           <Button
             size="lg"
             className="gradient-cta text-primary-foreground border-0 shadow-xl gap-2 text-base px-10 animate-pulse-glow"
+            asChild
           >
-            Start Free Trial <ArrowRight className="h-4 w-4" />
+            <Link to="/get-started">Start Free Trial <ArrowRight className="h-4 w-4" /></Link>
           </Button>
         </div>
       </motion.div>
