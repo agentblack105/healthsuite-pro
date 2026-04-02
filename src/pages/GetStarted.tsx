@@ -308,6 +308,11 @@ const GetStarted = () => {
           ) : (
             <Button
               disabled={!canProceed}
+              onClick={() =>
+                navigate("/setting-up", {
+                  state: { ...form, selectedModules },
+                })
+              }
               className="gradient-cta text-primary-foreground border-0 shadow-xl gap-2 px-8 animate-pulse-glow"
             >
               Launch My HIS <ArrowRight className="h-4 w-4" />
