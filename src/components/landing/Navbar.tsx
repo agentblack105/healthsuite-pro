@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = ["Features", "Modules", "Pricing", "Blog", "Contact"];
@@ -32,8 +33,8 @@ const Navbar = () => {
           <Button variant="ghost" size="sm" className="text-muted-foreground">
             Book a Demo
           </Button>
-          <Button size="sm" className="gradient-cta text-primary-foreground shadow-lg animate-pulse-glow border-0">
-            Get Started
+          <Button size="sm" className="gradient-cta text-primary-foreground shadow-lg animate-pulse-glow border-0" asChild>
+            <Link to="/get-started">Get Started</Link>
           </Button>
         </div>
 
@@ -61,8 +62,8 @@ const Navbar = () => {
                   {link}
                 </a>
               ))}
-              <Button className="gradient-cta text-primary-foreground border-0 mt-2">
-                Get Started
+              <Button className="gradient-cta text-primary-foreground border-0 mt-2" asChild>
+                <Link to="/get-started">Get Started</Link>
               </Button>
             </div>
           </motion.div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -31,8 +32,8 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
-            <Button size="lg" className="gradient-cta text-primary-foreground shadow-xl animate-pulse-glow border-0 gap-2 text-base px-8">
-              Start Free Trial <ArrowRight className="h-4 w-4" />
+            <Button size="lg" className="gradient-cta text-primary-foreground shadow-xl animate-pulse-glow border-0 gap-2 text-base px-8" asChild>
+              <Link to="/get-started">Start Free Trial <ArrowRight className="h-4 w-4" /></Link>
             </Button>
             <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-primary/30 text-foreground hover:bg-primary/5">
               <Play className="h-4 w-4" /> Watch Demo
