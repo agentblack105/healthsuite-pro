@@ -18,6 +18,7 @@ const modules = [
 ];
 
 const GetStarted = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [selectedModules, setSelectedModules] = useState<string[]>(["opd", "billing"]);
   const [form, setForm] = useState({
