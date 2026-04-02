@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, Check, Building2, User, Mail, Lock, Phone, Globe } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const modules = [
   { id: "opd", label: "OPD", desc: "Outpatient Department" },
@@ -18,6 +18,7 @@ const modules = [
 ];
 
 const GetStarted = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [selectedModules, setSelectedModules] = useState<string[]>(["opd", "billing"]);
   const [form, setForm] = useState({
@@ -307,6 +308,11 @@ const GetStarted = () => {
           ) : (
             <Button
               disabled={!canProceed}
+              onClick={() =>
+                navigate("/setting-up", {
+                  state: { ...form, selectedModules },
+                })
+              }
               className="gradient-cta text-primary-foreground border-0 shadow-xl gap-2 px-8 animate-pulse-glow"
             >
               Launch My HIS <ArrowRight className="h-4 w-4" />
