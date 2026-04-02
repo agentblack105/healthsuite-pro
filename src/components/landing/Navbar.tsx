@@ -33,8 +33,8 @@ const Navbar = () => {
           <Button variant="ghost" size="sm" className="text-muted-foreground">
             Book a Demo
           </Button>
-          <Button size="sm" className="gradient-cta text-primary-foreground shadow-lg animate-pulse-glow border-0">
-            Get Started
+          <Button size="sm" className="gradient-cta text-primary-foreground shadow-lg animate-pulse-glow border-0" asChild>
+            <Link to="/get-started">Get Started</Link>
           </Button>
         </div>
 
