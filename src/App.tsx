@@ -25,6 +25,9 @@ const App = () => (
           <Route path="/get-started" element={<GetStarted />} />
           <Route path="/setting-up" element={<SettingUp />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/staff-access" element={<StaffAccess />} />
+          <Route path="/facility-login" element={<FacilityLogin />} />
+          <Route path="/staff-portal" element={<StaffPortal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
