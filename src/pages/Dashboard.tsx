@@ -103,8 +103,8 @@ const Dashboard = () => {
 
         <nav className="flex-1 p-3 space-y-1">
           <SidebarLink icon={LayoutDashboard} label="Dashboard" active />
+          <SidebarLink icon={Users} label="Staff & Access" to="/staff-access" state={data} />
           <SidebarLink icon={Activity} label="Analytics" />
-          <SidebarLink icon={Users} label="Patients" />
           <SidebarLink icon={CalendarDays} label="Appointments" />
           <div className="pt-3 pb-1 px-3">
             <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest">Modules</p>
