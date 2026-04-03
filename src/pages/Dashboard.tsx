@@ -103,8 +103,8 @@ const Dashboard = () => {
 
         <nav className="flex-1 p-3 space-y-1">
           <SidebarLink icon={LayoutDashboard} label="Dashboard" active />
+          <SidebarLink icon={Users} label="Staff & Access" to="/staff-access" state={data} />
           <SidebarLink icon={Activity} label="Analytics" />
-          <SidebarLink icon={Users} label="Patients" />
           <SidebarLink icon={CalendarDays} label="Appointments" />
           <div className="pt-3 pb-1 px-3">
             <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest">Modules</p>
@@ -266,18 +266,13 @@ const Dashboard = () => {
   );
 };
 
-const SidebarLink = ({ icon: Icon, label, active }: { icon: React.ElementType; label: string; active?: boolean }) => (
-  <button
-    className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-      active
-        ? "bg-primary/10 text-primary"
-        : "text-muted-foreground hover:bg-muted hover:text-foreground"
-    }`}
-  >
-    <Icon className="h-4 w-4 shrink-0" />
-    {label}
-  </button>
-);
+const SidebarLink = ({ icon: Icon, label, active, to, state }: { icon: React.ElementType; label: string; active?: boolean; to?: string; state?: Record<string, unknown> }) => {
+  const cls = `w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+    active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"
+  }`;
+  if (to) return <Link to={to} state={state} className={cls}><Icon className="h-4 w-4 shrink-0" />{label}</Link>;
+  return <button className={cls}><Icon className="h-4 w-4 shrink-0" />{label}</button>;
+};
 
 const InfoRow = ({ icon: Icon, label, value, capitalize }: { icon: React.ElementType; label: string; value: string; capitalize?: boolean }) => (
   <div className="flex items-center justify-between">
