@@ -7,6 +7,9 @@ import Index from "./pages/Index.tsx";
 import GetStarted from "./pages/GetStarted.tsx";
 import SettingUp from "./pages/SettingUp.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
+import StaffAccess from "./pages/StaffAccess.tsx";
+import FacilityLogin from "./pages/FacilityLogin.tsx";
+import StaffPortal from "./pages/StaffPortal.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
